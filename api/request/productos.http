@@ -1,0 +1,35 @@
+@api = http://localhost:4000/api/Productos
+
+### obtener todas las viviendas
+GET {{api}}
+
+### obtener la vivienda por id
+GET {{api}}/41F13506-46B4-43FE-85B8-29FBE22E0A98
+
+### crear nueva vivienda
+POST {{api}}
+Content-Type: application/json
+{
+  "Id": "BBDF443F-9DD7-4835-8DC6-6E9A9FF9C9FC",
+  "TipoDeVivienda": "Unifamiliar",
+  "Zona": "Rural",
+  "Direccion": "Dirección de ejemplo",
+  "Precio": 100000,
+  "Tamano": 150.5,
+  "Observaciones": "Observaciones de ejemplo"
+}
+
+### actualizar vivienda
+PUT {{api}}/41F13506-46B4-43FE-85B8-29FBE22E0A98
+Content-Type: application/json
+{
+  "TipoDeVivienda": "Colectiva",
+  "Zona": "Urbana",
+  "Direccion": "Dirección de ejemplo actualizada",
+  "Precio": 500000,
+  "Tamano": 154.5,
+  "Observaciones": "Observaciones de ejemplo"
+}
+
+### eliminar vivienda
+DELETE {{api}}/41F13506-46B4-43FE-85B8-29FBE22E0A98
